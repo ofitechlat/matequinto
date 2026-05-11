@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Adventure | Fracciones & PEMDAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">📐 MathAdventure</div>
+            <div class="user-info">
+                <span id="user-name">Hola, Explorador</span>
+                <div class="stars-badge">⭐ <span id="stars">0</span></div>
+                <div class="sync-indicator">
+                    <div id="sync-dot" class="sync-dot"></div>
+                    <span id="sync-text">Local</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Navigation Roadmap -->
+            <section id="roadmap" class="active-view">
+                <div class="roadmap-header">
+                    <h1>Mapa de Habilidades</h1>
+                    <p>Completa los niveles para convertirte en un Maestro de las Matemáticas.</p>
+                </div>
+                
+                <div class="nodes-container" id="nodes-list">
+                    <!-- Nodes injected by JS -->
+                </div>
+            </section>
+
+            <!-- Lesson View -->
+            <section id="lesson-view" class="hidden">
+                <button class="btn-back" onclick="app.showRoadmap()">← Volver al Mapa</button>
+                <div id="lesson-content">
+                    <!-- Lesson details injected by JS -->
+                </div>
+            </section>
+
+            <!-- Quiz View -->
+            <section id="quiz-view" class="hidden">
+                <div class="quiz-card">
+                    <div class="progress-bar"><div id="progress-fill"></div></div>
+                    <div id="quiz-question-container">
+                        <!-- Questions injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results View -->
+            <section id="results-view" class="hidden">
+                <div class="roadmap-header">
+                    <h1>Mis Logros</h1>
+                    <p>Aquí puedes ver tu desempeño por cada tema.</p>
+                </div>
+                <div id="results-list" class="results-container">
+                    <!-- Results injected by JS -->
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <button onclick="app.showRoadmap()">🗺️ Mapa</button>
+            <button onclick="app.showResults()">📈 Resultados</button>
+            <button onclick="app.showTraining()">📚 Entrenamiento</button>
+            <button onclick="app.showSettings()">⚙️ Ajustes</button>
+        </nav>
+    </div>
+
+    <!-- Modals -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <h2>¡Bienvenido, Matemático!</h2>
+            <p>Escribe tu nombre para guardar tu progreso:</p>
+            <input type="text" id="name-input" placeholder="Tu nombre...">
+            <button onclick="app.saveName()">¡Comenzar!</button>
+        </div>
+    </div>
+
+    <script src="math_content.js"></script>
+    <script src="questions_bank.js"></script>
+    <script src="components.js"></script>
+    <script src="question_engine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
