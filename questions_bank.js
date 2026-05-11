@@ -164,6 +164,15 @@ const QuestionsBank = {
       options: ["5kg", "7kg", "10kg"],
       answer: 1,
       explanation: ["De A: 1 Cubo = 5kg.", "En B: 5 + Triángulo = 12.", "Triángulo = 12 - 5 = 7kg."]
+    },
+    {
+      id: "bal-006",
+      text: "Si 4 cubos pesan lo mismo que 2 esferas, y una esfera pesa 20kg, ¿cuánto pesa un cubo?",
+      type: "balance-challenge",
+      data: { balances: [{ title: "Equivalencia", left: { cubes: 4 }, right: { weight: 40 } }] },
+      options: ["10kg", "5kg", "20kg"],
+      answer: 0,
+      explanation: ["2 esferas = 40kg (20+20).", "4 cubos = 40kg.", "1 cubo = 40 / 4 = 10kg."]
     }
   ],
 
@@ -212,8 +221,114 @@ const QuestionsBank = {
       options: ["(-1, 3)", "(1, -3)", "(-1, -3)"],
       answer: 0,
       explanation: ["Respecto al eje Y, la X cambia de signo.", "1 pasa a ser -1.", "El punto es (-1, 3)."]
+    },
+    {
+      id: "geo-006",
+      text: "¿Cuál es el área de un rectángulo con base de (1,1) a (5,1) y altura de (1,1) a (1,3)?",
+      type: "grid-challenge",
+      data: { points: [{x: 1, y: 1}, {x: 5, y: 1}, {x: 1, y: 3}], size: 6 },
+      options: ["4 unidades²", "12 unidades²", "8 unidades²"],
+      answer: 2,
+      explanation: ["Base: 5 - 1 = 4.", "Altura: 3 - 1 = 2.", "Área = 4 x 2 = 8."]
     }
   ],
+
+  level5: [
+    {
+      id: "seq-001",
+      text: "Si una figura crece sumando 4 palitos en cada paso, y el paso 1 tiene 5 palitos, ¿cuántos tiene el paso 3?",
+      type: "icon",
+      data: { icon: "📈" },
+      options: ["9", "13", "17"],
+      answer: 1,
+      explanation: ["Paso 1: 5.", "Paso 2: 5 + 4 = 9.", "Paso 3: 9 + 4 = 13."]
+    },
+    {
+      id: "seq-002",
+      text: "En una secuencia de triángulos pegados, el primer triángulo usa 3 palitos y cada nuevo triángulo suma 2 palitos. ¿Cuántos para 4 triángulos?",
+      type: "icon",
+      data: { icon: "🔺" },
+      options: ["9", "11", "12"],
+      answer: 0,
+      explanation: ["T1: 3.", "T2: 3+2=5.", "T3: 5+2=7.", "T4: 7+2=9."]
+    },
+    {
+      id: "seq-003",
+      text: "¿Cuál es el número que sigue en la serie: 2, 5, 8, 11...?",
+      type: "icon",
+      data: { icon: "🔢" },
+      options: ["13", "14", "15"],
+      answer: 1,
+      explanation: ["La serie suma 3 en cada paso.", "11 + 3 = 14."]
+    },
+    {
+      id: "seq-004",
+      text: "Para formar un cuadrado se usan 4 palitos. Para dos cuadrados pegados se usan 7. ¿Cuántos para 3 cuadrados?",
+      type: "icon",
+      data: { icon: "⏹️" },
+      options: ["10", "11", "12"],
+      answer: 0,
+      explanation: ["C1: 4.", "C2: 4+3=7.", "C3: 7+3=10."]
+    },
+    {
+      id: "seq-005",
+      text: "Si el paso 10 de una secuencia tiene 41 palitos y la regla es sumar 4 en cada paso, ¿cuántos tenía el paso 9?",
+      type: "icon",
+      data: { icon: "🔙" },
+      options: ["37", "45", "38"],
+      answer: 0,
+      explanation: ["Restamos el crecimiento: 41 - 4 = 37."]
+    }
+  ],
+
+  level6: [
+    {
+      id: "adv-001",
+      text: "Resuelve: [ (10 + 5) × 2 ] ÷ 3 + 4",
+      type: "icon",
+      data: { icon: "🏆" },
+      options: ["14", "10", "15"],
+      answer: 0,
+      explanation: ["Paréntesis: 10 + 5 = 15.", "Multiplicación: 15 x 2 = 30.", "División: 30 / 3 = 10.", "Suma: 10 + 4 = 14."]
+    },
+    {
+      id: "adv-002",
+      text: "Calcula: 1/2 + 1/4 × 2",
+      type: "icon",
+      data: { icon: "🧪" },
+      options: ["1", "3/4", "1 1/2"],
+      answer: 0,
+      explanation: ["Primero multiplicación: (1/4) x 2 = 2/4 = 1/2.", "Sumamos: 1/2 + 1/2 = 1."]
+    },
+    {
+      id: "adv-003",
+      text: "Si X + 15 = 2X - 5, ¿cuánto vale X?",
+      type: "icon",
+      data: { icon: "⚖️" },
+      options: ["10", "20", "15"],
+      answer: 1,
+      explanation: ["Restamos X en ambos lados: 15 = X - 5.", "Sumamos 5 en ambos lados: 20 = X."]
+    },
+    {
+      id: "adv-004",
+      text: "Resuelve: 2 × ( 3² - 4 ) + 10 ÷ 2",
+      type: "icon",
+      data: { icon: "⚡" },
+      options: ["15", "12", "20"],
+      answer: 0,
+      explanation: ["Potencia: 3² = 9.", "Paréntesis: 9 - 4 = 5.", "Multiplicación: 2 x 5 = 10.", "División: 10 / 2 = 5.", "Suma: 10 + 5 = 15."]
+    },
+    {
+      id: "adv-005",
+      text: "¿Cuál es el 25% de (40 + 60)?",
+      type: "icon",
+      data: { icon: "📊" },
+      options: ["20", "25", "50"],
+      answer: 1,
+      explanation: ["Suma: 40 + 60 = 100.", "El 25% de 100 es 25."]
+    }
+  ],
+
   level7: [
     {
       id: "pos-001",
@@ -259,6 +374,15 @@ const QuestionsBank = {
       options: ["7 Centenas de Millar", "7 Unidades de Millón", "7 Decenas de Millón"],
       answer: 1,
       explanation: ["El 7 está en la séptima posición de derecha a izquierda.", "Esa es la posición de las Unidades de Millón."]
+    },
+    {
+      id: "pos-006",
+      text: "En el número 5,678,901, ¿qué cifra ocupa las Unidades de Millar?",
+      type: "icon",
+      data: { icon: "📍" },
+      options: ["8", "7", "6"],
+      answer: 0,
+      explanation: ["Unidades: 1, Decenas: 0, Centenas: 9, Unidades de Millar: 8."]
     }
   ]
 };
