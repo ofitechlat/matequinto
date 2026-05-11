@@ -130,6 +130,28 @@ const mathContent = {
         { question: "El número 34 aumentado en 57 es igual a un número X aumentado en 81. ¿Cuál es X?", options: ["10", "12", "15"], answer: 0 },
         { question: "Resuelve: 120,000 - (3/4 * 120,000) - (5/6 * sobrante)", options: ["5,000", "10,000", "25,000"], answer: 0 }
       ]
+    },
+    {
+      id: "level7",
+      title: "Nivel 7: Valor Posicional",
+      description: "Unidades, Decenas, Centenas y hasta Millones.",
+      status: "locked",
+      lessons: [
+        {
+          title: "La Escalera de los Números",
+          explanation: "Los números se agrupan de 3 en 3. <br>1. <b>Unidades (U, D, C)</b> <br>2. <b>Millares (UM, DM, CM)</b> <br>3. <b>Millones (UMM)</b>",
+          examples: [
+            { text: "1,234,567 = 1 Millón, 234 Mil, 567 Unidades.", icon: "🔢" }
+          ]
+        },
+        {
+          title: "Notación Desarrollada",
+          explanation: "Podemos escribir un número sumando sus partes: <br>4,320 = 4,000 + 300 + 20 <br>O por su posición: 4 UM + 3 C + 2 D",
+          examples: [
+            { text: "5,002 = 5 UM + 2 U", icon: "📝" }
+          ]
+        }
+      ]
     }
   ],
   training: {

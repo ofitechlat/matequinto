@@ -320,17 +320,22 @@ const app = {
         latestResults[entry.levelId] = entry;
     });
 
-    list.innerHTML = Object.values(latestResults).map(entry => `
-        <div class="result-card animate-popIn">
-            <div class="result-info">
-                <h4>${entry.levelTitle}</h4>
-                <p>Fecha: ${entry.date}</p>
+    list.innerHTML = Object.values(latestResults).map(entry => {
+        const currentLevel = mathContent.levels.find(l => l.id === entry.levelId);
+        const displayTitle = currentLevel ? currentLevel.title : entry.levelTitle;
+        
+        return `
+            <div class="result-card animate-popIn">
+                <div class="result-info">
+                    <h4>${displayTitle}</h4>
+                    <p>Fecha: ${entry.date}</p>
+                </div>
+                <div class="result-score">
+                    ${entry.score}/${entry.total * 10}
+                </div>
             </div>
-            <div class="result-score">
-                ${entry.score}/${entry.total * 10}
-            </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
   },
 
   showTraining() {

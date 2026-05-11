@@ -213,5 +213,52 @@ const QuestionsBank = {
       answer: 0,
       explanation: ["Respecto al eje Y, la X cambia de signo.", "1 pasa a ser -1.", "El punto es (-1, 3)."]
     }
+  ],
+  level7: [
+    {
+      id: "pos-001",
+      text: "¿Cómo se escribe en números: 'Un millón doscientos mil cinco'?",
+      type: "icon",
+      data: { icon: "🖋️" },
+      options: ["1,200,500", "1,200,005", "1,000,205"],
+      answer: 1,
+      explanation: ["Un millón: 1,000,000.", "Doscientos mil: 200,000.", "Cinco: 5.", "Sumamos: 1,200,005."]
+    },
+    {
+      id: "pos-002",
+      text: "¿Cuál es la notación desarrollada de 45,020?",
+      type: "icon",
+      data: { icon: "🧮" },
+      options: ["4 DM + 5 UM + 2 D", "4 UM + 5 C + 2 U", "4 DM + 5 C + 2 D"],
+      answer: 0,
+      explanation: ["4 es Decena de Millar (40,000).", "5 es Unidad de Millar (5,000).", "2 es Decena (20)."]
+    },
+    {
+      id: "pos-003",
+      text: "¿Cómo se lee el número 2,000,030?",
+      type: "icon",
+      data: { icon: "🗣️" },
+      options: ["Dos millones treinta", "Doscientos mil treinta", "Dos millones trescientos"],
+      answer: 0,
+      explanation: ["El primer 2 está en la posición de Unidades de Millón.", "El 30 está al final.", "Se lee: Dos millones treinta."]
+    },
+    {
+      id: "pos-004",
+      text: "Si tengo 15 centenas, ¿a cuántas unidades equivale?",
+      type: "icon",
+      data: { icon: "💰" },
+      options: ["150 unidades", "1,500 unidades", "15,000 unidades"],
+      answer: 1,
+      explanation: ["Una centena son 100 unidades.", "15 x 100 = 1,500 unidades."]
+    },
+    {
+      id: "pos-005",
+      text: "¿Qué valor representa el 7 en el número 7,400,000?",
+      type: "icon",
+      data: { icon: "⭐" },
+      options: ["7 Centenas de Millar", "7 Unidades de Millón", "7 Decenas de Millón"],
+      answer: 1,
+      explanation: ["El 7 está en la séptima posición de derecha a izquierda.", "Esa es la posición de las Unidades de Millón."]
+    }
   ]
 };
