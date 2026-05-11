@@ -395,7 +395,14 @@ const app = {
   },
 
   showSettings() {
-    if (confirm("¿Quieres reiniciar todo tu progreso?")) {
+    const token = prompt("Ingresa tu GitHub Token para activar la nube (opcional):", localStorage.getItem('math_gh_token') || '');
+    if (token !== null) {
+        localStorage.setItem('math_gh_token', token);
+        this.ghConfig.token = token;
+        if (token) this.syncWithGitHub();
+    }
+
+    if (confirm("¿Quieres reiniciar todo tu progreso local?")) {
       localStorage.clear();
       location.reload();
     }
